@@ -16,7 +16,7 @@ bool validate(string num){
     if (!num.empty()){
         if (num[0]!= '+' && num[0] != '-' && !isDigit(num[0])) return false;
         else{
-            for (int i = 1; i<num.length(); i++){
+            for (size_t i = 1; i<num.length(); i++){
                 if (!isDigit(num[i])){
                     if(num[i] == '.' && decimal == false){
                         decimal = true;
@@ -77,7 +77,7 @@ string addition(string num1, string num2){
     }
     while(!fracSum.empty() && fracSum.back() == '0')
         fracSum.pop_back();
-    for(int i = 0; i < int1.length(); i++){
+    for(size_t i = 0; i < int1.length(); i++){
         int digit1 = int1[i] - '0';
         int digit2 = int2[i] - '0';
         int temp;
